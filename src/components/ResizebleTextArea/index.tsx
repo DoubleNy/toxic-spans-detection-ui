@@ -16,6 +16,24 @@ const updateTextColors = (text: string, spans:number[]) => {
     // console.log(text);
     const end = "</span>";
     const start = "<span style='color: red'>";
+    console.log("spans");
+
+    //
+    spans = []
+    for(let j=0; j<text.length; j++) {
+        if(text[j] === ' '){
+            j+=1;
+
+            while(j < text.length && text[j] !== ' ') {
+                spans.push(j);
+                j+=1;
+            }
+
+            spans.push(j);
+        }
+    }
+
+    console.log(spans);
 
     let lastSpan = spans[spans.length - 1];
 
