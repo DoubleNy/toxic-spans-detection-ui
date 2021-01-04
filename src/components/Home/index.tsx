@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 
+import ResizableTextarea from "../ResizableTextArea";
 import Button from "../Button";
-import ResizebleTextarea from "../ResizebleTextArea";
 
 import "./_index.scss";
 
@@ -53,11 +53,11 @@ const Home: React.FunctionComponent<HomeProps> = (props) => {
         setTimeout(() => setFinishedSteps([STEP.PREPROCESSING]), 1000);
         setTimeout(() => setFinishedSteps([STEP.PREPROCESSING, STEP.ANALYZING]), 2000);
         setTimeout(() => setFinishedSteps([STEP.PREPROCESSING, STEP.ANALYZING, STEP.POSTPROCESSING]), 3000);
-        setTimeout(()=>setSpans([1]), 3000);
+        setTimeout(() => setSpans([1]), 3000);
     }
 
     return <div className="main--container">
-        <ResizebleTextarea className="main--container__input" onChange={handleOnChange} spans={spans}/>
+        <ResizableTextarea className="main--container__input" onChange={handleOnChange} spans={spans}/>
         <div className="main--container__results">
             <Button className="analyze" isLoading={isLoading} onClick={handleOnCheck}> Analyze text </Button>
             <ul>
