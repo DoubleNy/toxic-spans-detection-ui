@@ -21,7 +21,7 @@ const App: React.FunctionComponent<AppProps> = (props) => {
 
       connection.onmessage = (event) => {
             setResponse(event.data);
-            console.log(event.data);
+            console.log("Received: " + event.data);
       }
 
       setConnection(connection);
