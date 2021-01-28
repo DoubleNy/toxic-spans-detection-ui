@@ -48,13 +48,7 @@ const Home: React.FunctionComponent<HomeProps> = (props) => {
 
     const handleOnCheck = () => {
         props.connection && props.connection.send(text ?? '');
-        // setFinishedSteps([STEP.PREPROCESSING, STEP.ANALYZING, STEP.POSTPROCESSING]);
         setIsLoading(true);
-        // setTimeout(() => setIsLoading(false), 4000);
-        // setTimeout(() => setFinishedSteps([STEP.PREPROCESSING]), 1000);
-        // setTimeout(() => setFinishedSteps([STEP.PREPROCESSING, STEP.ANALYZING]), 2000);
-        // setTimeout(() => setFinishedSteps([STEP.PREPROCESSING, STEP.ANALYZING, STEP.POSTPROCESSING]), 3000);
-        // setTimeout(() => setSpans([1]), 3000);
     }
 
     return <div className="main--container">
